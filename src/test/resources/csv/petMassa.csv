@@ -1,0 +1,4 @@
+userId,userName,firstName,lastName,email,password,phone,userStatus
+8,eustaquio, Emerson,Eustaquio,eustaq@gmail.com,123456,34992876210,1
+9,Testeuser, Teste,User,teste@gmail.com,123136,34992876230,2
+11,Testeuserdois, Junior,Userdois,testedois@gmail.com,1234326,34992873210,3
