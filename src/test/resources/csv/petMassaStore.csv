@@ -1,0 +1,4 @@
+id,PetId,quantity,shipDate,status,complete
+80,179621001,1,2025-07-15T16:37:53.562+0000,finalizado,true
+90,179621002,1,2025-07-15T16:37:53.562+0000,finalizado,true
+100,179621003,1,2025-07-15T16:37:53.562+0000,finalizado,true

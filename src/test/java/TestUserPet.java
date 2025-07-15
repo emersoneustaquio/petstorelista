@@ -2,7 +2,6 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.jar.Attributes.Name;
 
 import static org.hamcrest.CoreMatchers.is;
 import org.junit.jupiter.api.Test;
@@ -10,7 +9,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
 
 
 // Testes para o método Post, Get, Put e Delete da entidade User
@@ -54,11 +52,10 @@ public class TestUserPet {
       .extract().response();
 
     }
- 
 
     @Test
     public void testGetUser () throws IOException{
-    
+
      // Ignorando a verificação de SSL usando RestAssured
     io.restassured.RestAssured.useRelaxedHTTPSValidation();
 
@@ -148,12 +145,16 @@ public void testPostUserPetDDT(int userId, String userName, String firstName, St
     .then() // Então
         .log().all() // mostre tudo na volta
         .statusCode(200)
+        .body("type", is ("unknown"))
+        .body("message",is(userName))
         .extract().response(); ;// verifica se status code é 200
 
 }
 
 
 }
+
+
 
 
 
